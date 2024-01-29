@@ -1,4 +1,4 @@
-package com.ljy.poly_.polyarr_;
+package com.ljy.poly_.object_;
 
 public class Person {
     String name;
@@ -27,5 +27,18 @@ public class Person {
 
     public String say() {
         return name + "\t" + age;
+    }
+
+    // 重写equals方法
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) {  // 地址相同，是同一个对象
+            return true;
+        }
+        if (obj instanceof Person) {// obj是Person类型
+            Person p = (Person)obj;
+            return this.name.equals(p.name) && this.age == p.age;
+        }
+        return false;
     }
 }

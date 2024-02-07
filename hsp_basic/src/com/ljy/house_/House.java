@@ -82,4 +82,20 @@ public class House {
     public void setState(String state) {
         this.state = state;
     }
+
+    public void modifyHouse() {
+        Scanner scanner = new Scanner(System.in);
+        System.out.println("==========修改房屋信息==========");
+        System.out.print("姓名：");
+        this.setName(scanner.next());
+        System.out.print("电话：");
+        this.setPhone(scanner.next());
+        System.out.print("地址：");
+        this.setAddress(scanner.next());
+        System.out.print("月租：");
+        this.setRent(scanner.nextFloat());
+        System.out.print("状态（未出租/已出租）：");
+        this.setState(scanner.next());
+        System.out.println("==========修改完成==========");
+    }
 }

@@ -1,4 +1,4 @@
-package com.ljy.house_;
+package com.ljy.houserent;
 
 import java.util.Calendar;
 
